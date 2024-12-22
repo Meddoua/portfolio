@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>À propos - Portfolio de Mohammed Ouadouch</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Mohammed <span>Ouadouch</span>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="toggleMenu()"></i>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Accueil</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">À propos</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skills.html">Compétences</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="services.html">Services</a></div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Accueil</a>
+                <a href="about.html">À propos</a>
+                <a href="skills.html">Compétences</a>
+                <a href="services.html">Services</a>
+                <i class="fa-solid fa-xmark cancel" onclick="toggleMenu()"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Content of the page -->
+    <div id="content">
+        <!-- Your page content here -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset: 0});
+        
+        function toggleMenu() {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+    <!-- Section À propos -->
+    <section id="about">
+        <div class="main-container">
+            <h1 data-aos="fade-up" data-aos-duration="1500">À propos de moi</h1>
+            <div class="about-content">
+                <div class="text-content">
+                    <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                        Bonjour ! Je suis Mohammed Ouadouch, un Jeune diplômé en ingénierie des systèmes d’information, spécialisé en développement web et bases de données, avec un Bac+2 en infrastructure digitale, option cybersécurité. Maîtrise des technologies modernes telles que HTML, CSS, JavaScript, WordPress et la gestion des bases de données.
+                        Passionné par l’innovation et l’apprentissage continu, je recherche une opportunité professionnelle pour intégrer une équipe dynamique, développer mes compétences et acquérir de l’expérience dans le web et la sécurité informatique.
+                        
+                    </p>
+                    <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">Formation</h2>
+                    <ul data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+                        <li>2023 - 2024 : Licence en Ingénierie des Systèmes d'Information du Web et des Bases de Données</li>
+                        <li>2021 - 2023 : Diplôme en Infrastructure Digitale, spécialité Cybersécurité </li>
+                        <li>2021 : Baccalauréat en Sciences Physiques</li>
+                    </ul>
+                    <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">Compétences</h2>
+                    <ul data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">
+                        <li>Développement Web : HTML, CSS, JavaScript, WordPress</li>
+                        <li>Gestion de Bases de Données : MySQL, SQL Server</li>
+                        <li>Cybersécurité : Nmap, Metasploit, Wireshark, OpenVAS, Snort, Autopsy, Burp Suite</li>
+                        <li>Réseaux : Configuration des réseaux, TCP/IP, administration de serveurs</li>
+                        <li>Langages de Programmation : C, C++, PHP</li>
+                        <li>Outils et Technologies : Git, Visual Studio Code, Kali Linux, XAMPP, AWS</li>
+                    </ul>
+                  
+                
+                    <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200">Projets</h2>
+                    <ul data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                        <li><strong>Move&Glow</strong> (07/2024) : Création d’un site web sportif pour la vente de suppléments et de packs d’abonnement pour une salle de sport. Développement avec WordPress et intégration de HTML et CSS personnalisés.</li>
+                        <li><strong>Portfolio Personnel</strong> (08/2024) : Développement d’un site moderne et interactif pour présenter mes compétences et projets. Réalisé avec HTML, CSS, JavaScript et PHP.</li>
+                    </ul>
+                    <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400">Certifications</h2>
+                    <ul data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
+                        <li>Certificat Cisco Académique Python (2021)</li>
+                        <li>Certificat Académique Cisco (CCNA1/2) (2021)</li>
+                        <li>Certificat Office (Word, Excel) (2021)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset: 0});
+    </script>
+</body>
+</html>

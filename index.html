@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio de Mohammed Ouadouch</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Mohammed <span>Ouadouch</span>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="toggleMenu()"></i>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Accueil</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">À propos</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skills.html">Compétences</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="services.html">Services</a></div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Accueil</a>
+                <a href="about.html">À propos</a>
+                <a href="skills.html">Compétences</a>
+                <a href="services.html">Services</a>
+                <i class="fa-solid fa-xmark cancel" onclick="toggleMenu()"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Section -->
+    <main>
+        <section>
+            <div class="main-container">
+                <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                    <img src="WhatsApp Image 2024-09-09 at 11.54.07.jpeg" alt="Image de profil">
+                </div>
+                <div class="content">
+                    <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Salut, je suis <span>Mohammed</span></h1>
+                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">Je suis <span class="typewriter-text"></span><label>|</label></div>
+                    <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
+                        Bonjour ! Je suis Mohamed Ouadouch, un développeur web créatif passionné par la création d'expériences numériques visuellement impressionnantes et interactives. Avec une solide expérience en développement front-end et back-end, je suis capable de transformer vos idées en réalité numérique. J'aime relever des défis et travailler sur des projets innovants qui poussent les limites de la technologie.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/Meddoua/Meddoua" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/mohammedouadouch_" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/mohammed ouadouch" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:ouadouchmohamed862@gmail.com" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+                        <a href="mailto:ouadouchmohamed862@gmail.com" target="_blank"><button>Travaillons ensemble</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset: 0});
+        
+        function toggleMenu() {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function toggleReadMore() {
+            const moreText = document.querySelector('.more-text');
+            const dots = document.querySelector('.dots');
+            const btn = document.querySelector('.read-more-btn');
+
+            if (moreText.style.display === "none") {
+                moreText.style.display = "inline";
+                dots.style.display = "none";
+                btn.style.display = "none";
+            } else {
+                moreText.style.display = "none";
+                dots.style.display = "inline";
+                btn.style.display = "inline";
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

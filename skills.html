@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Compétences - Mohammed Ouadouch</title>
+    <style>
+        /* Skills Section Styling */
+        #skills {
+            padding: 50px 0;
+            background-color: #111; /* Dark background for contrast */
+        }
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        /* Skill Item Styling */
+        .skill-item {
+            background: #222; /* Dark background */
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
+            transform-style: preserve-3d;
+            width: calc(33% - 20px); /* Three items per row */
+        }
+        .skill-item:hover {
+            transform: translateY(-15px) scale(1.05) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            background-color: #0066ff; /* Hover effect */
+        }
+        
+        /* Icon Styling */
+        .skill-item i {
+            font-size: 45px;
+            margin-bottom: 20px;
+            display: block;
+            color: #0066ff; /* Icon initial color */
+            transition: color 0.3s;
+        }
+        .skill-item:hover i {
+            color: #fff; /* Icon color on hover */
+        }
+
+        /* See More Button */
+        .see-more {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #0066ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .see-more:hover {
+            background-color: #004bb5;
+        }
+
+        .additional-info {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .skill-item {
+                width: calc(50% - 20px); /* Two items per row on smaller screens */
+            }
+        }
+        @media (max-width: 480px) {
+            .skill-item {
+                width: 100%; /* One item per row on mobile devices */
+            }
+        }
+    </style>
+</head>
+<body>
+   
+        <!-- Navigation -->
+        <nav>
+            <div class="nav-container">
+                <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                    Mohammed <span>Ouadouch</span>
+                </div>
+                <i class="fa-solid fa-bars hamburg" onclick="toggleMenu()"></i>
+                <div class="links">
+                    <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Accueil</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">À propos</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skills.html">Compétences</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="services.html">Services</a></div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="links">
+                    <a href="index.html">Accueil</a>
+                    <a href="about.html">À propos</a>
+                    <a href="skills.html">Compétences</a>
+                    <a href="services.html">Services</a>
+                    <i class="fa-solid fa-xmark cancel" onclick="toggleMenu()"></i>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Content of the page -->
+        <div id="content">
+            <!-- Your page content here -->
+        </div>
+    
+        <!-- Scripts -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({offset: 0});
+            
+            function toggleMenu() {
+                const dropdown = document.querySelector('.dropdown');
+                dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+            }
+        </script>
+        <script src="script.js"></script>
+    </body>
+    </html>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="main-container">
+            <h1 data-aos="fade-up" data-aos-duration="1500">Mes Compétences</h1>
+            <div class="skill-list" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                <div class="skill-item">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>HTML & CSS</h2>
+                    <p>Expertise dans la création de pages web responsives et visuellement attrayantes avec les dernières techniques HTML et CSS.</p>
+                    <button class="see-more" onclick="toggleInfo('html-css-info')">Voir plus</button>
+                    <div class="additional-info" id="html-css-info">
+                        <ul>
+                            <li>Design responsif avec Flexbox & Grid</li>
+                            <li>Animations et transitions CSS</li>
+                            <li>Compatibilité multi-navigateurs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>JavaScript</h2>
+                    <p>Maîtrise de JavaScript, y compris les fonctionnalités ES6, pour construire des applications web interactives.</p>
+                    <button class="see-more" onclick="toggleInfo('js-info')">Voir plus</button>
+                    <div class="additional-info" id="js-info">
+                        <ul>
+                            <li>Manipulation du DOM</li>
+                            <li>Gestion des événements</li>
+                            <li>JavaScript asynchrone (Promises, async/await)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <i class="fa-solid fa-shield-alt"></i>
+                    <h2>Sécurité Informatique</h2>
+                    <p>Connaissances des principes de sécurité et des bonnes pratiques pour construire des applications web sécurisées et résilientes.</p>
+                    <button class="see-more" onclick="toggleInfo('cyber-security-info')">Voir plus</button>
+                    <div class="additional-info" id="cyber-security-info">
+                        <ul>
+                            <li>Meilleures pratiques pour la sécurité des applications web</li>
+                            <li>Réseau et sécurité des systèmes</li>
+                            <li>Outils d'évaluation des vulnérabilités</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Gestion de Bases de Données</h2>
+                    <p>Expérience avec les systèmes de bases de données comme MySQL et MongoDB pour un stockage et une récupération efficaces des données.</p>
+                    <button class="see-more" onclick="toggleInfo('database-info')">Voir plus</button>
+                    <div class="additional-info" id="database-info">
+                        <ul>
+                            <li>Bases de données SQL & NoSQL</li>
+                            <li>Normalisation des bases de données</li>
+                            <li>Optimisation des requêtes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h2>Réseaux</h2>
+                    <p>Compréhension des concepts de réseaux, y compris les protocoles, le routage et la sécurité des réseaux.</p>
+                    <button class="see-more" onclick="toggleInfo('networking-info')">Voir plus</button>
+                    <div class="additional-info" id="networking-info">
+                        <ul>
+                            <li>Protocoles TCP/IP, UDP, et HTTP</li>
+                            <li>Configuration et gestion des pare-feu</li>
+                            <li>Outils de dépannage des réseaux</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <i class="fa-brands fa-wordpress"></i>
+                    <h2>WordPress</h2>
+                    <p>Développement et personnalisation des thèmes et plugins WordPress pour répondre aux besoins des clients.</p>
+                    <button class="see-more" onclick="toggleInfo('wordpress-info')">Voir plus</button>
+                    <div class="additional-info" id="wordpress-info">
+                        <ul>
+                            <li>Personnalisation de thèmes</li>
+                            <li>Développement de plugins</li>
+                            <li>Intégration WooCommerce</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 0 });
+
+      function toggleInfo(id) {
+        const info = document.getElementById(id);
+        info.style.display = (info.style.display === 'block') ? 'none' : 'block';
+      }
+    </script>
+</body>
+</html>

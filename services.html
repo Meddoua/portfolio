@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Services - Mohammed Ouadouch</title>
+    <style>
+        /* Services Section Styling */
+        #services {
+            padding: 50px 0;
+            background-color: #111; /* Dark background for contrast */
+        }
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        /* Service Item Styling */
+        .service-item {
+            background: #222; /* Dark background */
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
+            transform-style: preserve-3d;
+            width: calc(33% - 20px); /* Three items per row */
+        }
+        .service-item:hover {
+            transform: translateY(-15px) scale(1.05) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            background-color: #0066ff; /* Hover effect */
+        }
+        
+        /* Icon Styling */
+        .service-item i {
+            font-size: 45px;
+            margin-bottom: 20px;
+            display: block;
+            color: #0066ff; /* Icon initial color */
+            transition: color 0.3s;
+        }
+        .service-item:hover i {
+            color: #fff; /* Icon color on hover */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .service-item {
+                width: calc(50% - 20px); /* Two items per row on smaller screens */
+            }
+        }
+        @media (max-width: 480px) {
+            .service-item {
+                width: 100%; /* One item per row on mobile devices */
+            }
+        }
+    </style>
+</head>
+<body>
+  
+        <!-- Navigation -->
+        <nav>
+            <div class="nav-container">
+                <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                    Mohammed <span>Ouadouch</span>
+                </div>
+                <i class="fa-solid fa-bars hamburg" onclick="toggleMenu()"></i>
+                <div class="links">
+                    <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Accueil</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">À propos</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skills.html">Compétences</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="services.html">Services</a></div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="links">
+                    <a href="index.html">Accueil</a>
+                    <a href="about.html">À propos</a>
+                    <a href="skills.html">Compétences</a>
+                    <a href="services.html">Services</a>
+                    <i class="fa-solid fa-xmark cancel" onclick="toggleMenu()"></i>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Content of the page -->
+        <div id="content">
+            <!-- Your page content here -->
+        </div>
+    
+        <!-- Scripts -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({offset: 0});
+            
+            function toggleMenu() {
+                const dropdown = document.querySelector('.dropdown');
+                dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+            }
+        </script>
+        <script src="script.js"></script>
+    </body>
+    </html>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="main-container">
+            <h1 data-aos="fade-up" data-aos-duration="1500">Services</h1>
+            <div class="service-list" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                <!-- Web Development Service -->
+                <div class="service-item">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Développement Web</h2>
+                    <p>Création de sites web et d'applications web sur mesure, responsives, conviviales et optimisées pour la performance.</p>
+                </div>
+               
+                <!-- Cyber Security Service -->
+                <div class="service-item">
+                    <i class="fa-solid fa-shield-alt"></i>
+                    <h2>Sécurité Informatique</h2>
+                    <p>Implémentation de mesures de sécurité pour protéger les sites web et les applications web contre les menaces et vulnérabilités.</p>
+                </div>
+                <!-- Database Management Service -->
+                <div class="service-item">
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Gestion de Bases de Données</h2>
+                    <p>Conception et gestion de bases de données robustes pour stocker et récupérer efficacement les données pour les applications web dynamiques.</p>
+                </div>
+                <!-- Network Solutions Service -->
+                <div class="service-item">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h2>Solutions Réseau</h2>
+                    <p>Offrir des services de configuration et de gestion des réseaux pour assurer une communication sécurisée et efficace dans votre infrastructure web.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset: 0});
+    </script>
+</body>
+</html>
